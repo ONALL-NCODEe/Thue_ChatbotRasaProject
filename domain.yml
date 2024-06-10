@@ -1,0 +1,213 @@
+version: "3.1"
+
+entities:
+    - tax_id
+    - content_of_tax
+
+slots:
+    taxid:
+        type: text
+        mappings:
+            - type: from_entity
+              entity: tax_id
+    contentoftax:
+        type: list
+        mappings:
+            - type: from_entity
+              entity: content_of_tax
+
+actions:
+    - action_get_tax_info
+    - action_reply_tax_question
+
+intents:
+    - greet
+    - goodbye
+    - affirm
+    - deny
+    - thue_scope
+    - loai_thue
+    - thue_tncn
+    - thue_gtgt
+    - thue_tndn
+    - thue_dpnn
+    - thue_xnk
+    - thue_ttdb
+    - pttt
+    - pttt_tt
+    - pttt_gt
+    - vt_thue
+    - tracuu_thue
+    - tracuu_msthue
+    - ttdt_nopthue
+    - noi_nopthue
+    - th_nopthue
+    - khong_nopthue
+    - khieunai_thue
+    - khaithue
+    - get_tax_info
+    - inform_tax_id
+    - inform
+    - ask_tax_questions_sdt
+    - ask_tax_questions_logo
+    - ask_tax_questions_taisancong
+    - ask_tax_questions_tn_maytinhtien
+    - ask_tax_questions_dh_tiendichvu
+    - ask_tax_questions_qd_dinhdang
+    - hd_dientu_coquanthue
+    - yeucau_hd_coquanthue
+    - thutuc_dk_hddientu
+    - restart_conversation
+
+responses:
+    utter_greet:
+        - text: "Xin chào! Tôi là chatbot chuyên về Thuế. Bạn có vấn đề gì cần giải đáp?"
+        - text: "Chào bạn! Tôi ở đây để hỗ trợ bạn mọi vấn đề liên quan đến thuế. Bạn cần hỗi trợ gì không?"
+        - text: "Chào bạn! Bạn muốn tìm hiểu về vấn đề thuế nào?"
+        - text: "Tôi là chatbot! Tôi có thể giúp gì cho bạn về thuế?"
+        - text: "Bạn muốn hỏi gì về thuế không? Để chatbot trả lời cho."
+        - text: "Bạn đang gặp khó khăn về vấn đề thuế nào? Hãy đặt câu hỏi. Chatbot sẽ trả lời."
+
+    utter_goodbye:
+        - text: "Tạm biệt! Chúc bạn một ngày tốt lành!"
+        - text: "Tạm biệt và hẹn gặp lại! Chúc bạn một ngày tốt lành!"
+        - text: "Chào tạm biệt! Chúc bạn một ngày tốt lành và may mắn."
+        - text: "Chúc bạn một ngày tốt lành nhé! Hẹn gặp lại bạn sau!"
+
+    utter_iamabot:
+        - text: "Tôi là bot về thuế. Hãy đặt câu hỏi về thuế. Tôi sẽ trả lời."
+
+    utter_thue_scope:
+        - text: "Tôi chuyên giải đáp thắc mắt về thuế. Chỉ cần trong phạm vi tôi sẽ trả lời."
+
+    utter_isthue:
+        - text: "Thuế là khoản tiền bắt buộc mà cá nhân,
+              tổ chức phải nộp cho Nhà nước theo quy định của pháp luật, dựa trên các tiêu chí như thu nhập, giá trị tài sản, hoặc hoạt động kinh tế."
+
+    utter_loai_thue:
+        - text: "Bạn muốn tìm hiểu về loại thuế nào?
+              (Ví dụ: Thuế thu nhập cá nhân, Thuế giá trị gia tăng, Thuế thu nhập doanh nghiệp, Thuế đất phi nông nghiệp,...)"
+
+    utter_thue_tncn:
+        - text: "Thuế thu nhập cá nhân (TNCN)
+              là khoản tiền bắt buộc mà cá nhân có thu nhập phải nộp cho Nhà nước sau khi đã được giảm trừ theo quy định."
+    utter_thue_gtgt:
+        - text: "Thuế giá trị gia tăng (VAT)
+              là loại thuế gián thu được đánh trên giá trị gia tăng của hàng hóa, dịch vụ phát sinh trong quá trình từ sản xuất, lưu thông đến tiêu dùng."
+
+    utter_thue_tndn:
+        - text: "Thuế thu nhập doanh nghiệp (TNDN)
+              là loại thuế trực thu được đánh vào thu nhập của doanh nghiệp, tổ chức kinh tế có thu nhập sau khi đã trừ đi các khoản chi phí hợp lý theo quy định của pháp luật."
+
+    utter_thue_dpnn:
+        - text: "Thuế sử dụng đất phi nông nghiệp
+              là khoản tiền bắt buộc mà cá nhân, tổ chức, hộ gia đình sử dụng đất phi nông nghiệp phải nộp cho ngân sách nhà nước theo quy định của Luật Đất đai 2013."
+
+    utter_thue_xnk:
+        - text:
+              "Thuế xuất nhập khẩu là loại thuế gián thu do nhà nước Việt Nam ban hành, áp dụng đối với hàng hóa xuất khẩu, nhập khẩu qua biên giới Việt Nam,
+              bao gồm cả trường hợp xuất khẩu từ thị trường trong nước vào khu phi thuế quan và nhập khẩu từ khu phi thuế quan vào thị trường trong nước."
+
+    utter_thue_ttdb:
+        - text: "Thuế tiêu thụ đặc biệt (TTĐB)
+              là loại thuế gián thu do nhà nước Việt Nam ban hành, áp dụng đối với một số loại hàng hóa, dịch vụ mang tính chất xa xỉ nhằm điều tiết việc sản xuất, nhập khẩu và tiêu dùng xã hội."
+
+    utter_pttt:
+        - text: "Có 2 phương thức thu thuế: Thu trực tiếp và thu gián tiếp"
+
+    utter_pttt_tt:
+        - text: "Thuế trực tiếp: Là loại thuế được áp dụng trực tiếp đối với thu nhập, tài sản của cá nhân, tổ chức. Ví dụ: Thuế thu nhập cá nhân, thuế thu nhập doanh nghiệp, thuế tài sản,..."
+
+    utter_pttt_gt:
+        - text: "Thuế gián tiếp: Là loại thuế được áp dụng gián tiếp đối với giá trị hàng hóa, dịch vụ thông qua tiêu dùng. Ví dụ: Thuế giá trị gia tăng (VAT), thuế tiêu thụ đặc biệt,..."
+
+    utter_vt_thue:
+        - text: "- Góp phần điều tiết thu nhập, đảm bảo công bằng xã hội;
+              \n- Tăng nguồn thu cho ngân sách nhà nước;
+              \n- Khuyến khích sản xuất, kinh doanh và đầu tư;
+              \n- Bảo vệ môi trường."
+
+    utter_tracuu_thue:
+        - text:
+              "Bạn có thể tra cứu thông tin về thuế trên website của Tổng cục Thuế (https://www.gdt.gov.vn/),
+              website của Bộ Tài chính (https://www.mof.gov.vn/) hoặc website của các cơ quan thuế địa phương."
+
+    utter_tracuu_msthue:
+        - text: "Có vẻ như bạn đang cần tra cứu mã số thuê. Hãy nhập mã số thuế của bạn, để tôi có thể giúp bạn tra cứu thông tin."
+
+    utter_khieunai_thue:
+        - text: "Nếu bạn có khiếu nại về thuế, bạn có thể gửi đơn khiếu nại
+              đến cơ quan thuế đã ban hành quyết định hành chính về thuế đối với bạn."
+
+    utter_ttdt_nopthue:
+        - text:
+              "Bạn có thể tra cứu thông tin về các loại thuế, đối tượng nộp thuế, mức thuế suất,
+              cách tính thuế và quy trình nộp thuế trên Cổng thông tin điện tử Tổng cục Thuế (https://www.gdt.gov.vn/) hoặc website của Bộ Tài chính (https://www.mof.gov.vn/)."
+
+    utter_noi_nopthue:
+        - text: "Bạn có thể nộp thuế tại cơ quan thuế hoặc qua các ngân hàng thương mại theo quy định của pháp luật."
+
+    utter_th_nopthue:
+        - text: "Thời hạn nộp thuế đối với từng loại thuế sẽ khác nhau.
+              Bạn có thể tra cứu thông tin về thời hạn nộp thuế trên Cổng thông tin điện tử Tổng cục Thuế (https://www.gdt.gov.vn/) hoặc website của Bộ Tài chính (https://www.mof.gov.vn/)
+              để xem chi tiết."
+
+    utter_khong_nopthue:
+        - text: "Nếu không nộp thuế hoặc nộp thuế thiếu, bạn sẽ bị truy thu thuế, lãi phát sinh và có thể bị xử phạt theo quy định của pháp luật."
+
+    utter_khaithue:
+        - text:
+              " 1. Chuẩn bị hồ sơ: Giấy tờ tùy thân; Hóa đơn, chứng từ; Sổ sách kế toán; Các tờ khai thuế theo quy định
+              \n2. Điền thông tin vào tờ khai thuế: Bạn có thể tải tờ khai thuế mẫu tại website của Tổng cục Thuế (https://www.gdt.gov.vn/) hoặc website của Bộ Tài chính (https://www.mof.gov.vn/).
+              \n3. Nộp tờ khai thuế: Bạn có thể nộp tờ khai thuế trực tiếp tại cơ quan thuế hoặc qua mạng.
+              (Truy cập Cổng thông tin điện tử Tổng cục Thuế (https://www.gdt.gov.vn/) hoặc website của Bộ Tài chính (https://www.mof.gov.vn/) để nộp qua mạng)"
+
+    utter_hd_dientu_coquanthue:
+        - text:
+              "*Doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh sử dụng hóa đơn điện tử có mã của cơ quan thuế thông qua tổ chức cung cấp dịch vụ hóa đơn điện tử thì truy cập vào trang thông tin điện tử của tổ chức cung cấp dịch vụ hóa đơn điện tử hoặc sử dụng phần mềm hóa đơn điện tử của đơn vị để thực hiện:
+              \n- Lập hóa đơn bán hàng hóa, cung cấp dịch vụ.
+              \n- Ký số trên các hóa đơn đã lập và gửi hóa đơn qua tổ chức cung cấp dịch vụ hóa đơn điện tử để cơ quan thuế cấp mã.
+              \n*Doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh thuộc đối tượng không phải trả tiền dịch vụ theo quy định tại Khoản 1 Điều 14 Nghị định số 123/2020/NĐ-CP nếu truy cập Cổng thông tin điện tử của Tổng cục Thuế để lập hóa đơn thì sử dụng tài khoản đã được cấp khi đăng ký để thực hiện:
+              \n- Lập hóa đơn bán hàng hóa, cung cấp dịch vụ.
+              \n- Ký số trên các hóa đơn đã lập và gửi hóa đơn để cơ quan thuế cấp mã.
+              \nHệ thống cấp mã hóa đơn của Tổng cục Thuế tự động thực hiện cấp mã hóa đơn và gửi trả kết quả cấp mã hóa đơn cho người gửi.
+              \nDoanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh bán hàng hóa, cung cấp dịch vụ có trách nhiệm gửi hóa đơn điện tử đã được cấp mã của cơ quan thuế cho người mua. Phương thức gửi và nhận hóa đơn được thực hiện theo thỏa thuận giữa người bán và người mua, đảm bảo phù hợp với quy định của pháp luật về giao dịch điện tử.
+              \n(Khoản 1 và Khoản 3 Điều 17 Nghị định số 123/2020/NĐ-CP)"
+
+    utter_yeucau_hd_coquanthue:
+        - text: "Hóa đơn được cơ quan thuế cấp mã phải đảm bảo:
+              \n- Đầy đủ nội dung về hóa đơn điện tử theo quy định tại Điều 10 Nghị định số 123/2020/NĐ-CP.
+              \n- Đúng định dạng về hóa đơn điện tử theo quy định tại Điều 12 Nghị định số 123/2020/NĐ-CP.
+              \n- Đúng thông tin đăng ký theo quy định tại Điều 15 Nghị định số 123/2020/NĐ-CP.
+              \n- Không thuộc trường hợp ngừng sử dụng hóa đơn điện tử có mã của cơ quan thuế theo quy định tại khoản 1 Điều 16 Nghị định số 123/2020/NĐ-CP.
+              \n(Điểm a Khoản 2 Điều 17 Nghị định số 123/2020/NĐ-CP)"
+
+    utter_thutuc_dk_hddientu:
+        - text:
+              "Doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh không thuộc đối tượng ngừng sử dụng hóa đơn theo quy định tại khoản 1 Điều 16 Nghị định số 123/2020/NĐ-CP đăng ký sử dụng hóa đơn điện tử (bao gồm cả đăng ký hóa đơn điện tử bán tài sản công, hóa đơn điện tử bán hàng dự trữ quốc gia) thông qua tổ chức cung cấp dịch vụ hóa đơn điện tử.
+              \nTrường hợp sử dụng hóa đơn điện tử có mã của cơ quan thuế không phải trả tiền dịch vụ thì có thể đăng ký sử dụng hóa đơn điện tử thông qua Cổng thông tin điện tử của Tổng cục Thuế hoặc tổ chức cung cấp dịch vụ hóa đơn điện tử được Tổng cục Thuế ủy thác cung cấp dịch vụ hóa đơn điện tử có mã của cơ quan thuế không phải trả tiền dịch vụ.
+              \nTrường hợp doanh nghiệp là tổ chức kết nối chuyển dữ liệu hóa đơn điện tử theo hình thức gửi trực tiếp đến cơ quan thuế thì đăng ký sử dụng hóa đơn điện tử thông qua Cổng thông tin điện tử của Tổng cục Thuế.
+              \nNội dung thông tin đăng ký theo Mẫu số 01/ĐKTĐ-HĐĐT Phụ lục IA ban hành kèm theo Nghị định số 123/2020/NĐ-CP.
+              \nCổng thông tin điện tử của Tổng cục Thuế gửi thông báo điện tử về việc tiếp nhận đăng ký sử dụng hóa đơn điện tử qua tổ chức cung cấp dịch vụ hóa đơn điện tử đối với trường hợp doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh đăng ký sử dụng hóa đơn điện tử thông qua tổ chức cung cấp dịch vụ hóa đơn điện tử.
+              \nCổng thông tin điện tử của Tổng cục Thuế gửi thông báo điện tử trực tiếp theo Mẫu số 01/TB-TNĐT Phụ lục IB về việc tiếp nhận đăng ký sử dụng hóa đơn điện tử cho doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh qua địa chỉ thư điện tử đã đăng ký với cơ quan thuế đối với trường hợp doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh đăng ký sử dụng hóa đơn điện tử trực tiếp tại Cổng thông tin điện tử của Tổng cục Thuế.
+              \nKể từ thời điểm cơ quan thuế chấp nhận đăng ký sử dụng hóa đơn điện tử theo quy định tại Nghị định số 123/2020/NĐ-CP, doanh nghiệp, tổ chức kinh tế, tổ chức khác, hộ, cá nhân kinh doanh phải ngừng sử dụng hóa đơn điện tử đã thông báo phát hành theo các quy định trước đây, tiêu hủy hóa đơn giấy đã thông báo phát hành nhưng chưa sử dụng (nếu có). Trình tự, thủ tục tiêu hủy thực hiện theo quy định tại Điều 27 Nghị định số 123/2020/NĐ-CP.
+              \n(Khoản 1 và Khoản 3 Điều 15 Nghị định số 123/2020/NĐ-CP)"
+
+    utter_affirm:
+        - text: "Cảm ơn bạn đã xác nhận. Bạn cần giải đáp thêm điều gì nữa không?"
+
+    utter_out_of_scope:
+        - text: "Xin lỗi bạn, vấn đề này nằm ngoài phạm vi tôi phụ trách. Vui lòng hỏi câu khác."
+        - text: "Xin lỗi bạn, câu này không thuộc về thuế. Vui lòng hỏi cấu liên quan đến thuế."
+        - text: "Rất tiếc, Tôi không thể trả lời bạn câu này. Bạn hãy đặt câu hỏi khác về thuế."
+        - text: "Xin lỗi bạn, bạn hãy đặt câu hỏi chi tiết hơn về thuế, câu này có chút mơ hồ và không rõ ràng"
+
+    utter_please_rephrase:
+        - text: "Xin lỗi, tôi chưa hiểu ý bạn lắm! Bạn đặt câu hỏi khác xem sao."
+        - text: "Xin lỗi, bạn hãy đặt câu hỏi liên quan. Cảm ơn"
+        - text: "Vui lòng không spam tin nhắn. Hãy đặt câu hỏi khác. Cảm ơn"
+        - text: "Bạn đang spam tin nhắn. Vui lòng dừng lại."
+
+session_config:
+    session_expiration_time: 60
+    carry_over_slots_to_new_session: true

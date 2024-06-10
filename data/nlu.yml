@@ -1,0 +1,366 @@
+version: "3.1"
+
+nlu:
+    - intent: greet
+      examples: |
+          - alo
+          - alô
+          - Xin chào
+          - Chào
+          - Tôi cần giúp đỡ
+          - .
+          - ...
+          - Cho tôi hỏi
+          - Tôi cần thông tin thêm
+
+    - intent: goodbye
+      examples: |
+          - bye
+          - Tạm biệt
+          - goodbye
+          - bye bye
+          - Hẹn gặp lại
+
+    - intent: affirm
+      examples: |
+          - yes
+          - ok
+          - được
+          - đúng rồi
+          - đúng vậy
+          - ổn rồi
+          - rỗ rồi
+          - đã rõ
+          - cảm ơn
+          - xin ảm ơn
+          - Chắc chắn r
+          - thank you
+          - of course
+          - that sounds good
+          - correct
+
+    # - intent: ask_tax_questions
+    #   examples: |
+    #       - [Số điện thoại]{"entity": "content_of_tax", "value": "SDT"} của Trung tâm Hỗ trợ triển khai Hóa đơn điện tử của Tổng cục Thuế là như thế nào
+    #       - Cơ sở kinh doanh được phép in trên [hóa đơn logo]{"entity": "content_of_tax", "value": "hd_logo"} nhãn hiệu của mình không?
+    #       - Các yêu cầu đối với nội dung hóa đơn bán [tài sản công]{"entity": "content_of_tax", "value": "nd_taisancong"}?
+    #       - [Trách nhiệm của người bán]{"entity": "content_of_tax", "value": "trachnhiem_maytinhtien"} khi sử dụng hóa đơn điện tử có mã của cơ quan thuế được khởi tạo từ máy tính tiền có kết nối chuyển dữ liệu điện tử với cơ quan thuế được quy định như thế nào?
+    #       - Những trường hợp nào khi sử dụng [hóa đơn điện tử không phải trả tiền dịch vụ]{"entity": "content_of_tax", "value": "hoadon_kophidichvu"}?
+    #       - [Hóa đơn điện tử được quy định về định dạng]{"entity": "content_of_tax", "value": "hoadon_đinhdang"} như thế nào?
+    #       - Trường hợp nào thì cơ quan thuế cấp hóa đơn điện tử có [mã theo từng lần phát sinh là hóa đơn bán hàng]{"entity": "content_of_tax", "value": "maphatsinh_banhang"}?
+    #       - Trường hợp nào thì cơ quan thuế cấp hóa đơn điện tử có [mã theo từng lần phát sinh là hóa đơn giá trị gia tăng]{"entity": "content_of_tax", "value": "maphatsinh_gtgt"}?
+    #       - Cơ quan thuế cấp hóa đơn điện tử có [mã của cơ quan thuế theo từng lần phát sinh được xác định]{"entity": "content_of_tax", "value": "maphatsinh_xacdinh"} như thế nào?
+
+    - intent: ask_tax_questions_sdt
+      examples: |
+          - [sdt]{"entity": "content_of_tax", "value": "SDT"}
+          - tôi muốn biết [số điện thoại]{"entity": "content_of_tax", "value": "SDT"} hỗ trợ việc triển khai hóa đơn điện tử
+          - [số điện thoại]{"entity": "content_of_tax", "value": "SDT"} hỗ trợ triển khai hóa đơn điện tử
+          - [số điện thoại]{"entity": "content_of_tax", "value": "SDT"} của Trung tâm Hỗ trợ triển khai Hóa đơn điện tử của Tổng cục Thuế là như thế nào
+          - Trung tâm hỗ trợ triển khai hóa đơn điện tử có [số điện thoại]{"entity": "content_of_tax", "value": "SDT"}
+
+    - intent: ask_tax_questions_logo
+      examples: |
+          - [logo]{"entity": "content_of_tax", "value": "hd_logo"}
+          - Cơ sở kinh doanh được phép in trên hóa đơn [logo]{"entity": "content_of_tax", "value": "hd_logo"}
+          - in trên hóa đơn [logo]{"entity": "content_of_tax", "value": "hd_logo"} nhãn hiệu của mình
+
+    - intent: ask_tax_questions_taisancong
+      examples: |
+          - [tài sản công]{"entity": "content_of_tax", "value": "nd_taisancong"}
+          - Các yêu cầu đối với nội dung hóa đơn bán [tài sản công]{"entity": "content_of_tax", "value": "nd_taisancong"}?    
+          - Nội dung hóa đơn bán [tài sản công]{"entity": "content_of_tax", "value": "nd_taisancong"} gồm các yêu cầu gì
+          - tôi muốn biết yêu cầu của nội dung hóa đơn bán [tài sản công]{"entity": "content_of_tax", "value": "nd_taisancong"}
+
+    - intent: ask_tax_questions_tn_maytinhtien
+      examples: |
+          - [trách nhiệm của người bán]{"entity": "content_of_tax", "value": "trachnhiem_maytinhtien"} khi sử dụng hóa đơn điện
+          - [trách nhiệm của người bán]{"entity": "content_of_tax", "value": "trachnhiem_maytinhtien"} khi sử dụng hóa đơn điện tử có mã của cơ quan thuế được khởi tạo từ máy tính tiền có kết nối chuyển dữ liệu điện tử với cơ quan thuế được quy định như thế nào?
+          - tôi muốn biết [trách nhiệm của người bán]{"entity": "content_of_tax", "value": "trachnhiem_maytinhtien"} khi sử dụng hóa đơn điện
+
+    - intent: ask_tax_questions_dh_tiendichvu
+      examples: |
+          - Tôi muốn biết những trường hợp [không phải trả tiền dịch vụ]{"entity": "content_of_tax", "value": "hoadon_kophidichvu"}
+          - Những trường hợp nào khi sử dụng hóa đơn điện tử [không phải trả tiền dịch vụ]{"entity": "content_of_tax", "value": "hoadon_kophidichvu"}?
+          - [không phải trả tiền dịch vụ]{"entity": "content_of_tax", "value": "hoadon_kophidichvu"} khi sử dụng hóa đơn điện tử trong những trường hợp nào
+
+    - intent: ask_tax_questions_qd_dinhdang
+      examples: |
+          - [quy định về định dạng]{"entity": "content_of_tax", "value": "hoadon_đinhdang"} của hóa đơn điện tử
+          - Hóa đơn điện tử được [quy định về định dạng]{"entity": "content_of_tax", "value": "hoadon_đinhdang"} như thế nào?
+          - Tôi muốn biết [quy định về định dạng]{"entity": "content_of_tax", "value": "hoadon_đinhdang"} của hóa đơn điện tử như thế nào
+
+    - intent: get_tax_info
+      examples: |
+          - [1234567890](tax_id)
+          - Mã số thuế của tôi là [1234567890](tax_id)
+          - Tôi muốn biết thông tin về mã số thuế {taxid}
+          - Tôi có Mã số thuế là [ABC123](tax_id)
+          - Mã số thuế của doanh nghiệp là [XYZ456](tax_id)
+          - Tôi muốn kiểm tra thông tin thuế về [789XYZ](tax_id)
+
+    - intent: hd_dientu_coquanthue
+      examples: |
+          - hóa đơn điện tử
+          - hóa đơn điện tử có mã của cơ quan thuế
+          - Việc lập hóa đơn điện tử có mã của cơ quan thuế được thực hiện như thế nào?
+
+    - intent: yeucau_hd_coquanthue
+      examples: |
+          - yêu cầu được cơ quan thuế cấp mã
+          - Hóa đơn được cơ quan thuế cấp mã phải đảm bảo những yêu cầu gì?
+
+    - intent: thutuc_dk_hddientu
+      examples: |
+          - đăng ký hóa đơn điện tử
+          - đăng ký sử dụng hóa đơn điện tử
+          - Thủ tục đăng ký sử dụng hóa đơn điện tử?
+
+    - intent: thue_scope
+      examples: |
+          - Phạm vi
+          - Phạm vi của bạn là gì
+          - phạm vi của bản bao nhiêu
+
+    - intent: isthue
+      examples: |
+          - thuế là gì
+          - thuế
+          - cho tôi biết về thuế
+
+    - intent: tracuu_thue
+      examples: |
+          - Tôi có thể tra cứu thuể ở đâu?
+          - Làm thế nào để tra cứu thông tin về thuế?
+          - tra cứu thuế
+          - tra cứu thông tin thuế
+          - làm sao tôi có thể tra cứu thuế
+
+    - intent: tracuu_msthue
+      examples: |
+          - Tôi muốn tra cứu mã số thuế
+          - tra cứu mã số thuế
+          - mã số thuể
+          - thông tin về mã số thuế
+
+    - intent: khieunai_thue
+      examples: |
+          - Tôi có khiếu nại về thuế
+          - Làm thế nào để khiếu nại về thuế?
+          - tôi muốn khiếu nại về thuế
+          - tôi cần khiếu nại về thuế
+
+    - intent: pttt
+      examples: |
+          - pttt
+          - phương thức thu thuế
+          - có bao nhiêu phương thức thu thuế
+
+    - intent: pttt_tt
+      examples: |
+          - thuế trực tiếp
+          - thu thuế trực tiếp là sao
+          - thu thuế trực tiếp là gì
+          - phương thức thu thuế trực tiếp
+
+    - intent: pttt_gt
+      examples: |
+          - thuế gián tiếp
+          - thu thuế gián tiếp là sao
+          - thu thuế gián tiếp là gì
+          - phương thức thu thuế gián tiếp
+
+    - intent: khaithue
+      examples: |
+          - Làm sao để tôi có thể khai thuế
+          - khai thuế như thế nào
+          - Cần làm gì để khai thuế
+          - cách để khai thuế
+          - Tôi muốn có thông tin để khai thuế
+          - Thông tin cho tôi cách khai thuế
+
+    - intent: vt_thue
+      examples: |
+          - thuế có vai trò gì
+          - thuế có vai trò như thế nào
+          - vai trò của thế
+          - cho tôi biết về vai trò của thuế
+
+    - intent: loai_thue
+      examples: |
+          - loại thuế
+          - loại thuế thì sao
+          - Có bao nhiêu loại thuế
+          - Tôi cần tìm hiểu về loại thuế
+
+    - intent: thue_tncn
+      examples: |
+          - thuế tncn
+          - tncn là gì
+          - tôi muốn biết về thuế thu nhập cá nhân
+          - thuế thu nhập cá nhân là gì
+          - cá nhân tôi thì đóng thuế gì
+          - thông tin cho tôi về thuế thu nhập cá nhân
+
+    - intent: thue_gtgt
+      examples: |
+          - thuế gtgt
+          - gtgt là thuế gì
+          - tôi cần biết về thuế giá trị gia tăng
+          - VAT là thuế gì
+          - thuế giá trị gia tăng là thuế gì?
+          - thông tin cho tôi về thuế giá trị gia tăng
+
+    - intent: thue_tndn
+      examples: |
+          - thuế tndn
+          - tndn là thuế gì
+          - doanh nghiệp cần phải đóng thuế gì
+          - tôi cần biết về thuế thu nhập doanh nghiệp
+          - thông tin cho tôi về thuế thu nhập doanh nghiệp
+
+    - intent: thue_dpnn
+      examples: |
+          - thuế dpnn
+          - dpnn là thuế gì
+          - đất phi nông nghiệp cần đóng thuế gì
+          - tôi cần biết về thuế đất phi nông nghiệp
+          - thông tin cho tôi về thuế đất phi nông nghiệp
+
+    - intent: thue_xnk
+      examples: |
+          - thuế xnk
+          - xnk là thuế gì
+          - tôi muốn biết về thuế xuất nhập khẩu
+          - xuất nhập khấu sản phẩm cần đóng thuế gì
+          - tôi cần biết về thuế xuất nhập khẩu
+          - thông tin cho tôi về thuế xuất nhập khẩu
+
+    - intent: thue_ttdb
+      examples: |
+          - thuế ttdb
+          - ttdb là thuế gì
+          - tôi muốn biết về thuế tiêu thụ đặc biệt
+          - thuế tiêu thụ đặc biệt là thuế gì
+          - tôi cần biết về thuế tiêu thụ đặc biệt
+          - thông tin cho tôi về thuế tiêu thụ đặc biệt
+
+    - intent: ttdt_nopthue
+      examples: |
+          - Làm sao biết mình thuộc đối tượng thuế nào?
+          - Làm thế nào để biết mình phải nộp loại thuế nào?
+          - Tôi thuộc đối tượng nào khi nộp thuế
+          - đối tượng nộp thuế
+
+    - intent: noi_nopthue
+      examples: |
+          - Tôi có thể nộp thuế ở đâu?
+          - nơi nộp thuế
+          - nộp thuế nơi nào
+          - nộp thuế ở đâu
+          - đến đâu để nộp thuế
+          - đóng thuế thì tới đâu
+
+    - intent: th_nopthue
+      examples: |
+          - Thời hạn nộp thuế là khi nào? 
+          - thời hạn nộp thuế
+          - Cho tôi biết thông tin về thời hạn thuế
+
+    - intent: khong_nopthue
+      examples: |
+          - Nếu không nộp thuế sẽ bị xử lý như thế nào?
+          - không nộp thuế
+          - Cho tôi biết thông tin về khi không nộp thuế
+          - tôi có thể không nộp thuế không
+
+    - intent: out_of_scope
+      examples: |
+          - Đó là gì
+          - Thời tiết hôm nay
+          - khóa học miễn phí
+          - phim mới nhất
+          - Sách hay
+          - Sự kiện công nghệ
+          - Tôi không muốn hỏi
+          - Con vật đó là gì
+          - Tôi cần mua thuốc
+          - Tôi là ai
+          - Câu hỏi gì mà nằm ngoài phạm vi
+          - Cầu vòng màu gì
+          - Tôi không cần giúp đỡ
+          - Đã xem
+
+    - intent: please_rephrase
+      examples: |
+          - bla bla
+          - mlem mlem
+          - spam spam
+          - ? bot bị sao sao
+          - Tôi hỏi vậy đó
+          - Sao không trả lời tôi
+          - Đây là một tin nhắn spam
+
+    - intent: deny
+      examples: |
+          - no
+          - không phải
+          - không phải vậy
+          - chưa đúng
+          - chưa phải
+          - chưa phải vậy
+          - chắc không phải vậy
+          - không rõ
+          - chưa rõ
+          - không hiểu lắm 
+          - không hiểu
+          - chưa hiểu
+          - never
+          - I don't think so
+          - don't like that
+          - no way
+          - not really
+
+    - intent: mood_great
+      examples: |
+          - perfect
+          - great
+          - amazing
+          - feeling like a king
+          - wonderful
+          - I am feeling very good
+          - I am great
+          - I am amazing
+          - I am going to save the world
+          - super stoked
+          - extremely good
+          - so so perfect
+          - so good
+          - so perfect
+
+    - intent: mood_unhappy
+      examples: |
+          - my day was horrible
+          - I am sad
+          - I don't feel very well
+          - I am disappointed
+          - super sad
+          - I'm so sad
+          - sad
+          - very sad
+          - unhappy
+          - not good
+          - not very good
+          - extremly sad
+          - so saad
+          - so sad
+
+    - intent: bot_challenge
+      examples: |
+          - Bạn là ai?
+          - Bạn là bot hả.
+          - who are you?
+          - are you a bot?
+          - are you a human?
+          - am I talking to a bot?
+          - am I talking to a human?

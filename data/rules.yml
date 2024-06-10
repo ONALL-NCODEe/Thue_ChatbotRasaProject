@@ -1,0 +1,72 @@
+version: "3.1"
+
+rules:
+    - rule: chào khi người dùng chào
+      steps:
+          - intent: greet
+          - action: utter_greet
+
+    - rule: Say goodbye anytime the user says goodbye
+      steps:
+          - intent: goodbye
+          - action: utter_goodbye
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến phạm vi
+      steps:
+          - intent: thue_scope
+          - action: utter_thue_scope
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến thuế là gì
+      steps:
+          - intent: isthue
+          - action: utter_isthue
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến phương thức thu thuế
+      steps:
+          - intent: pttt
+          - action: utter_pttt
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến vai trò của thuế
+      steps:
+          - intent: vt_thue
+          - action: utter_vt_thue
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến loại thuế
+      steps:
+          - intent: loai_thue
+          - action: utter_loai_thue
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến nơi nộp thuế
+      steps:
+          - intent: noi_nopthue
+          - action: utter_noi_nopthue
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến khai thuế
+      steps:
+          - intent: khaithue
+          - action: utter_khaithue
+
+    - rule: Nói phạm vi bất cứ  khi nào người dùng đề cập đến không nộp thuế
+      steps:
+          - intent: khong_nopthue
+          - action: utter_khong_nopthue
+
+    - rule: Nói out_of_scope bất cứ lúc nào người dùng nói ra ngoài phạm vi
+      steps:
+          - intent: out_of_scope
+          - action: utter_out_of_scope
+
+    - rule: Nói please_rephrase bất cứ lúc nào người dùng spam
+      steps:
+          - intent: please_rephrase
+          - action: utter_please_rephrase
+
+    - rule: Say 'I am a bot' anytime the user challenges
+      steps:
+          - intent: bot_challenge
+          - action: utter_iamabot
+
+    - rule: nói bất cứ lúc nào người dùng nói về mã số thuế
+      steps:
+          - intent: get_tax_info
+          - action: action_get_tax_info

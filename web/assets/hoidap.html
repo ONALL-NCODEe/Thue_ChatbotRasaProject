@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi cục thuế khu vực Cầu Ngang - Trà Cú</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hoidap.css">
+    <link rel="shotcut icon" href="images/favicon.ico" type="images/x-icon">
+
+    <link rel="stylesheet" href="js/hoidap.js">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link rel="stylesheet" href="js/bootstrap.js.map">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="js/jquery-3.6.1.min.js">
+    <link rel="stylesheet" href="js/jQuery.js">
+</head>
+
+<body>
+    <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: '/greet',
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005",
+                            title: 'Thuế Rasa-Chatbot',
+                            subtitle: 'Nói xin chào, và hãy bắt đầu đặt câu hỏi'
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+    </script>
+    <header>
+        <img id="logo" src="images/logo.png" alt="">
+        <span id="siteTitle">CHI CỤC THUẾ <br> KHU VỰC CẦU NGANG - TRÀ CÚ</span>
+    </header>
+    <nav>
+        <div>
+            <a href="../index.html">Trang Chủ</a> |
+            <a href="gioithieu.html">Giới Thiệu</a> |
+            <a href="tintuc.html">Tin Tức</a> |
+            <a href="hoidap.html">Hỏi Đáp</a> |
+            <a href="lienhe.html">Liên Hệ</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="leftSide">
+            <div class="group-box">
+                <div class="title">DANH MỤC</div>
+                <div class="leftMenu">
+                    <ul>
+                        <li><a href="tintuc.html">THÔNG TIN CẦN BIẾT</a></li>
+                        <li><a href="tintuc.html">TIN TỨC - THỜI SỰ</a></li>
+                        <li><a href="tochuc.html">TỔ CHỨC NGHÀNH</a></li>
+                        <li><a href="hd.html">HƯỚNG DẪN KHAI THUẾ</a></li>
+                        <li><a href="lichsu.html">LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="group-box">
+                <div class="title">THÔNG BÁO</div>
+                <div class="leftMenu">
+                    <ul>
+                        <li><a
+                                href="https://www.gdt.gov.vn/wps/portal?1dmy&page=6_CQKCVKV008UPD0IMM7VUID00T7&urile=wcm%3apath%3a%2Fgdt%2Bcontent%2Fsa_gdt%2Fsa_news%2Fsa_thongbao%2F2024%2F81929489-5350-485f-9a83-4f817ceb0149">Thông
+                                báo về điều chỉnh, bổ sung Kế hoạch tuyển dụng công chức Tổng cục Thuế năm 2024
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="?1dmy&amp;page=6_CQKCVKV008UPD0IMM7VUID00T7&amp;urile=wcm%3apath%3a%2Fgdt%2Bcontent%2Fsa_gdt%2Fsa_news%2Fsa_thongbao%2F2024%2Fd7244326-884c-4d48-a499-e18e57b866b0">Thông
+                                báo về số báo danh, phòng thi, địa điểm tổ chức kỳ thi cấp chứng chỉ hành nghề dịch vụ
+                                làm thủ tục về thuế năm 2024</a>
+                        </li>
+                        <!-- <li>
+                                <a href="?1dmy&amp;page=6_CQKCVKV008UPD0IMM7VUID00T7&amp;urile=wcm%3apath%3a%2Fgdt%2Bcontent%2Fsa_gdt%2Fsa_news%2Fsa_thongbao%2F2024%2Ffc95c9af-741a-4864-832f-a8494d692412">Thông báo kết quả và danh sách trúng tuyển Kỳ tuyển dụng công chức theo Nghị định số 140/2017/NĐ-CP vào Cơ quan Tổng cục Thuế, Cục Thuế TP. Hà Nội và Cục Thuế TP. Hồ Chí Minh năm 2024</a>
+                            </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mainContent" class="group-box">
+            <div class="title text-center">ĐÓNG GÓP - PHẢN HỒI</div>
+            <div id="left-main">
+                <form name="regfr" action="status" method="post" onsubmit="return frmValidate()">
+                    <table>
+                        <tr>
+                            <th>Họ tên:</th>
+                            <td><input required type="text" name="hoten" placeholder="không rỗng" class="box"></td>
+                        </tr>
+                        <tr>
+                            <th>Giới tính:</th>
+                            <td>
+                                <input required type="radio" name="gt" class="box">Nam
+                                <input required type="radio" name="gt" class="box">Nữ
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Số ĐT:</th>
+                            <td><input required pattern="\d{10}" type="text" name="dt" placeholder="nhập 10 số"
+                                    class="box">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Địa chỉ:</th>
+                            <td><input required type="text" name="dc" placeholder="không rỗng" class="box"></td>
+                        </tr>
+                        <tr>
+                            <th>E-mail:</th>
+                            <td><input required type="text" name="mail" placeholder="vidu@gmail.com" class="box"></td>
+                        </tr>
+                        <tr>
+                            <th>Đóng góp ý kiến:</th>
+                            <td>
+                                <textarea name="" placeholder="không rỗng" id="message"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><button id="btn" onclick="frmValidate" type="submit" class="box">Gửi</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+    </main>
+
+    <footer>
+        <p style="text-align: center; font-size: 20px; margin: auto; color: white">Chi Cục Thuế Khu Vực Cầu Ngang - Trà
+            Cú </p>
+    </footer>
+
+</body>
+
+</html>
