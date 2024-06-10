@@ -1,0 +1,218 @@
+version: "3.1"
+
+stories:
+    - story: người dùng không muốn gì nữa
+      steps:
+          - intent: affirm
+          - action: utter_affirm
+          - intent: deny
+          - action: utter_goodbye
+
+    - story: đường dẫn về phạm vi
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_scope
+          - action: utter_thue_scope
+
+    - story: đường dẫn về loại thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: loai_thue
+          - action: utter_loai_thue
+
+    - story: đường dẫn về thuế thu nhập cá nhân
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_tncn
+          - action: utter_thue_tncn
+
+    - story: đường dẫn về thuế giá trị gia tăng
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_gtgt
+          - action: utter_thue_gtgt
+
+    - story: đường dẫn về thuế thu nhập doanh nghiệp
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_tndn
+          - action: utter_thue_tndn
+
+    - story: đường dẫn về thuế đất phi nông nghiệp
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_dpnn
+          - action: utter_thue_dpnn
+
+    - story: đường dẫn về thuế xuất nhập khẩu
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_xnk
+          - action: utter_thue_xnk
+
+    - story: đường dẫn về thuế tiêu thụ đặc biệt
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thue_ttdb
+          - action: utter_thue_ttdb
+
+    - story: đường dẫn về tra cứu thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: tracuu_thue
+          - action: utter_tracuu_thue
+
+    - story: đường dẫn về tra cứu thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: tracuu_msthue
+          - action: utter_tracuu_msthue
+
+    - story: đường dẫn về khiếu nại về thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: khieunai_thue
+          - action: utter_khieunai_thue
+
+    - story: đường dẫn về đối tượng nộp thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ttdt_nopthue
+          - action: utter_ttdt_nopthue
+
+    - story: đường dẫn về thời hạn nộp thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: th_nopthue
+          - action: utter_th_nopthue
+
+    - story: đường dẫn về phương thức thư thuế trực tiếp
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: pttt
+          - action: utter_pttt
+          - intent: pttt_tt
+          - action: utter_pttt_tt
+
+    - story: đường dẫn về phương thức thư thuế gián tiếp
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: pttt
+          - action: utter_pttt
+          - intent: pttt_gt
+          - action: utter_pttt_gt
+
+    # - story: Get tax info
+    #   steps:
+    #       - intent: get_tax_info
+    #       - action: utter_ask_taxid
+    #       # - intent: inform
+    #       #   entities:
+    #       #       - taxid: "your_tax_id"
+    #       - action: utter_found_info
+    #       - action: action_get_tax_info
+
+    - story: trả lời câu hỏi sdt
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ask_tax_questions_sdt
+          - action: action_reply_tax_question
+
+    - story: trả lời câu hỏi logo
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ask_tax_questions_logo
+          - action: action_reply_tax_question
+
+    - story: trả lời câu hỏi yêu cầu nd hóa đơn bán tài sản công
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ask_tax_questions_taisancong
+          - action: action_reply_tax_question
+
+    - story: trả lời câu hỏi trách nhiệm của người bán
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ask_tax_questions_tn_maytinhtien
+          - action: action_reply_tax_question
+
+    - story: trả lời câu hỏi trường hợp không phải đóng tiền dịch vụ khi sử dụng hddt
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ask_tax_questions_dh_tiendichvu
+          - action: action_reply_tax_question
+
+    - story: trả lời câu hỏi quy định về định dạng
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: ask_tax_questions_qd_dinhdang
+          - action: action_reply_tax_question
+
+    - story: trả lời câu hỏi hd điện tử cơ quan thuế
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: hd_dientu_coquanthue
+          - action: utter_hd_dientu_coquanthue
+
+    - story: trả lời câu hỏi cơ quan thuế cấp mã đảm bảo yêu cầu
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: yeucau_hd_coquanthue
+          - action: utter_yeucau_hd_coquanthue
+
+    - story: trả lời câu hỏi đăng ký sử dụng hóa đơn điện tử
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: thutuc_dk_hddientu
+          - action: utter_thutuc_dk_hddientu
+
+    # - story: happy path
+    #   steps:
+    #   - intent: greet
+    #   - action: utter_greet
+    #   - intent: mood_great
+    #   - action: utter_happy
+
+    # - story: sad path 1
+    #   steps:
+    #   - intent: greet
+    #   - action: utter_greet
+    #   - intent: mood_unhappy
+    #   - action: utter_cheer_up
+    #   - action: utter_did_that_help
+    #   - intent: affirm
+    #   - action: utter_happy
+
+    # - story: sad path 2
+    #   steps:
+    #   - intent: greet
+    #   - action: utter_greet
+    #   - intent: mood_unhappy
+    #   - action: utter_cheer_up
+    #   - action: utter_did_that_help
+    #   - intent: deny
+    #   - action: utter_goodbye

@@ -1,0 +1,11 @@
+https://rasachatbot-e2a57.web.app/index.html
+
+docker build -t rasa_chatbot .
+
+docker run -it -p 5005:5005 rasa_chatbot
+
+docker-compose up -d
+
+ngrok http 5005
+
+firebase hosting:channel:list

@@ -1,0 +1,72 @@
+/* h1{
+    color: blue;
+} */
+
+table {
+  position: relative;
+  border-spacing: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+/* .frm{
+    background-color: white;
+    margin: auto;
+    border: 1px solid #4294DE;
+    border-radius: 10px 10px 10px 10px;
+    width: 500px;
+    text-align: center;
+    margin-bottom:  10px;
+    padding-bottom: 10px;
+    
+} */
+/* .title{
+    background-color: #4294DE;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+#content{
+	position: relative;
+	top: 20px;
+} */
+
+
+tr {
+  font-size: 15px;
+}
+
+textarea {
+  border: 0.1rem solid #212529;
+  font-size: 15px;
+  text-align: center;
+}
+
+th {
+  float: left;
+}
+
+.box {
+  border: 0.1rem solid #212529;
+  text-align: center;
+  font-size: 15px;
+  margin: auto;
+
+}
+button{
+  width: 70px;
+}
+
+.submit:hover{
+    color: #fff;
+    background: #2fc7e5;
+  }
+  .submit{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-decoration: none;
+    padding: 2px 4px;
+ }  
